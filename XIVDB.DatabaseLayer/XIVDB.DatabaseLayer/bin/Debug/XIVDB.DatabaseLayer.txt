@@ -1,0 +1,211 @@
+﻿WARN - [8/3/2016 3:43:33 PM](Warning) - [Class1 : .ctor] - Debug
+WARN - [8/3/2016 4:21:11 PM] - [Class1 : .ctor] - Debug
+WARN - [8/3/2016 4:23:07 PM] - [Class1 : .ctor] - Debug
+WARN - [8/3/2016 4:34:56 PM] - [Class1 : .ctor] - Debug
+WARN - [8/3/2016 4:37:04 PM] - [Class1 : .ctor] - Debug
+WARN - [8/4/2016 10:55:53 AM] - [Class1 : .ctor] - Debug
+INFO - [8/4/2016 10:56:15 AM] - [MainService : CreateDbFile] - Database file not found. Creating file...
+INFO - [8/4/2016 10:56:19 AM] - [MainService : CreateDbFile] - Database file created.
+WARN - [8/4/2016 11:04:07 AM] - [Class1 : .ctor] - Debug
+INFO - [8/4/2016 11:04:07 AM] - [MainService : CreateDbFile] - Database file not found. Creating file...
+INFO - [8/4/2016 11:04:07 AM] - [MainService : CreateDbFile] - Database file created.
+WARN - [8/4/2016 11:05:39 AM] - [Class1 : .ctor] - Debug
+INFO - [8/4/2016 11:05:39 AM] - [MainService : CreateDbFile] - Database file not found. Creating file...
+INFO - [8/4/2016 11:05:39 AM] - [MainService : CreateDbFile] - Database file created.
+WARN - [8/5/2016 11:06:11 AM] - [Class1 : .ctor] - Debug
+INFO - [8/5/2016 11:06:11 AM] - [MainService : CreateDbFile] - Database file not found. Creating file...
+INFO - [8/5/2016 11:06:11 AM] - [MainService : CreateDbFile] - Database file created.
+WARN - [8/5/2016 11:20:31 AM] - [Class1 : .ctor] - Debug
+INFO - [8/5/2016 11:20:31 AM] - [MainService : CreateDbFile] - Database file not found. Creating file...
+INFO - [8/5/2016 11:20:31 AM] - [MainService : CreateDbFile] - Database file created.
+WARN - [8/5/2016 11:39:29 AM] - [Class1 : .ctor] - Debug
+WARN - [8/5/2016 12:22:05 PM] - [Class1 : .ctor] - Debug
+INFO - [8/5/2016 12:23:05 PM] - [XivDbAccess : CreateTable] - Created table [Achievement]
+INFO - [8/5/2016 12:23:28 PM] - [XivDbAccess : CreateTable] - Created table [Action]
+INFO - [8/5/2016 12:23:53 PM] - [XivDbAccess : CreateTable] - Created table [Emote]
+FATAL - [8/5/2016 12:24:09 PM] - [ExceptionHandler : HandleException] - The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.<>c.<CreateTable>b__11_0(PropertyInfo property) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 72
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.CreateTable(Type t) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 71
+WARN - [8/5/2016 12:24:09 PM] - [MainService : CreateDbTables] - Error occured during table creation for object [Enemy].
+INFO - [8/5/2016 12:24:09 PM] - [XivDbAccess : CreateTable] - Created table [FATE]
+INFO - [8/5/2016 12:24:09 PM] - [XivDbAccess : CreateTable] - Created table [Gathering]
+INFO - [8/5/2016 12:24:09 PM] - [XivDbAccess : CreateTable] - Created table [Instance]
+INFO - [8/5/2016 12:24:09 PM] - [XivDbAccess : CreateTable] - Created table [Item]
+FATAL - [8/5/2016 12:24:09 PM] - [ExceptionHandler : HandleException] - The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.<>c.<CreateTable>b__11_0(PropertyInfo property) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 72
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.CreateTable(Type t) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 71
+WARN - [8/5/2016 12:24:09 PM] - [MainService : CreateDbTables] - Error occured during table creation for object [Leve].
+INFO - [8/5/2016 12:24:09 PM] - [XivDbAccess : CreateTable] - Created table [Minion]
+INFO - [8/5/2016 12:24:09 PM] - [XivDbAccess : CreateTable] - Created table [Mount]
+INFO - [8/5/2016 12:24:09 PM] - [XivDbAccess : CreateTable] - Created table [NPC]
+INFO - [8/5/2016 12:24:09 PM] - [XivDbAccess : CreateTable] - Created table [Place]
+INFO - [8/5/2016 12:24:09 PM] - [XivDbAccess : CreateTable] - Created table [Quest]
+INFO - [8/5/2016 12:24:09 PM] - [XivDbAccess : CreateTable] - Created table [Recipe]
+INFO - [8/5/2016 12:24:09 PM] - [XivDbAccess : CreateTable] - Created table [Status]
+INFO - [8/5/2016 12:24:09 PM] - [XivDbAccess : CreateTable] - Created table [Title]
+INFO - [8/5/2016 12:24:09 PM] - [XivDbAccess : CreateTable] - Created table [Weather]
+WARN - [8/5/2016 2:49:19 PM] - [Class1 : .ctor] - Debug
+WARN - [8/5/2016 2:50:43 PM] - [Class1 : .ctor] - Debug
+WARN - [8/5/2016 5:17:28 PM] - [Class1 : .ctor] - Debug
+INFO - [8/5/2016 5:18:17 PM] - [XivDbAccess : CreateTable] - Created table [Achievement]
+FATAL - [8/5/2016 5:19:52 PM] - [ExceptionHandler : HandleException] - The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.<>c.<CreateTable>b__11_0(PropertyInfo property) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 73
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.CreateTable(Type t) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 72
+WARN - [8/5/2016 5:19:52 PM] - [MainService : CreateDbTables] - Error occured during table creation for object [Action].
+FATAL - [8/5/2016 5:19:52 PM] - [ExceptionHandler : HandleException] - The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.<>c.<CreateTable>b__11_0(PropertyInfo property) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 73
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.CreateTable(Type t) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 72
+WARN - [8/5/2016 5:19:52 PM] - [MainService : CreateDbTables] - Error occured during table creation for object [Emote].
+FATAL - [8/5/2016 5:19:52 PM] - [ExceptionHandler : HandleException] - The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.<>c.<CreateTable>b__11_0(PropertyInfo property) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 73
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.CreateTable(Type t) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 72
+WARN - [8/5/2016 5:19:52 PM] - [MainService : CreateDbTables] - Error occured during table creation for object [Enemy].
+FATAL - [8/5/2016 5:19:52 PM] - [ExceptionHandler : HandleException] - The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.<>c.<CreateTable>b__11_0(PropertyInfo property) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 73
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.CreateTable(Type t) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 72
+WARN - [8/5/2016 5:19:52 PM] - [MainService : CreateDbTables] - Error occured during table creation for object [FATE].
+FATAL - [8/5/2016 5:19:52 PM] - [ExceptionHandler : HandleException] - The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.<>c.<CreateTable>b__11_0(PropertyInfo property) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 73
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.CreateTable(Type t) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 72
+WARN - [8/5/2016 5:19:52 PM] - [MainService : CreateDbTables] - Error occured during table creation for object [Gathering].
+FATAL - [8/5/2016 5:19:52 PM] - [ExceptionHandler : HandleException] - The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.<>c.<CreateTable>b__11_0(PropertyInfo property) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 73
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.CreateTable(Type t) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 72
+WARN - [8/5/2016 5:19:52 PM] - [MainService : CreateDbTables] - Error occured during table creation for object [Instance].
+INFO - [8/5/2016 5:19:52 PM] - [XivDbAccess : CreateTable] - Created table [Item]
+FATAL - [8/5/2016 5:19:52 PM] - [ExceptionHandler : HandleException] - The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.<>c.<CreateTable>b__11_0(PropertyInfo property) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 73
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.CreateTable(Type t) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 72
+WARN - [8/5/2016 5:19:52 PM] - [MainService : CreateDbTables] - Error occured during table creation for object [Leve].
+FATAL - [8/5/2016 5:19:52 PM] - [ExceptionHandler : HandleException] - The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.<>c.<CreateTable>b__11_0(PropertyInfo property) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 73
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.CreateTable(Type t) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 72
+WARN - [8/5/2016 5:19:52 PM] - [MainService : CreateDbTables] - Error occured during table creation for object [Minion].
+FATAL - [8/5/2016 5:19:52 PM] - [ExceptionHandler : HandleException] - The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.<>c.<CreateTable>b__11_0(PropertyInfo property) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 73
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.CreateTable(Type t) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 72
+WARN - [8/5/2016 5:19:52 PM] - [MainService : CreateDbTables] - Error occured during table creation for object [Mount].
+FATAL - [8/5/2016 5:19:52 PM] - [ExceptionHandler : HandleException] - The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.<>c.<CreateTable>b__11_0(PropertyInfo property) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 73
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.CreateTable(Type t) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 72
+WARN - [8/5/2016 5:19:52 PM] - [MainService : CreateDbTables] - Error occured during table creation for object [NPC].
+FATAL - [8/5/2016 5:19:52 PM] - [ExceptionHandler : HandleException] - The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.<>c.<CreateTable>b__11_0(PropertyInfo property) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 73
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.CreateTable(Type t) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 72
+WARN - [8/5/2016 5:19:52 PM] - [MainService : CreateDbTables] - Error occured during table creation for object [Place].
+FATAL - [8/5/2016 5:19:52 PM] - [ExceptionHandler : HandleException] - The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.<>c.<CreateTable>b__11_0(PropertyInfo property) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 73
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.CreateTable(Type t) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 72
+WARN - [8/5/2016 5:19:52 PM] - [MainService : CreateDbTables] - Error occured during table creation for object [Quest].
+FATAL - [8/5/2016 5:19:52 PM] - [ExceptionHandler : HandleException] - The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.<>c.<CreateTable>b__11_0(PropertyInfo property) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 73
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.CreateTable(Type t) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 72
+WARN - [8/5/2016 5:19:52 PM] - [MainService : CreateDbTables] - Error occured during table creation for object [Recipe].
+FATAL - [8/5/2016 5:19:52 PM] - [ExceptionHandler : HandleException] - The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.<>c.<CreateTable>b__11_0(PropertyInfo property) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 73
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.CreateTable(Type t) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 72
+WARN - [8/5/2016 5:19:52 PM] - [MainService : CreateDbTables] - Error occured during table creation for object [Status].
+FATAL - [8/5/2016 5:19:52 PM] - [ExceptionHandler : HandleException] - The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.<>c.<CreateTable>b__11_0(PropertyInfo property) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 73
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.CreateTable(Type t) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 72
+WARN - [8/5/2016 5:19:52 PM] - [MainService : CreateDbTables] - Error occured during table creation for object [Title].
+FATAL - [8/5/2016 5:19:52 PM] - [ExceptionHandler : HandleException] - The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.<>c.<CreateTable>b__11_0(PropertyInfo property) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 73
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.CreateTable(Type t) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 72
+WARN - [8/5/2016 5:19:52 PM] - [MainService : CreateDbTables] - Error occured during table creation for object [Weather].
+WARN - [8/11/2016 2:07:39 PM] - [Class1 : .ctor] - Debug
+INFO - [8/11/2016 2:10:11 PM] - [XivDbAccess : CreateTable] - Created table [Achievement]
+INFO - [8/11/2016 2:10:19 PM] - [XivDbAccess : CreateTable] - Created table [Action]
+INFO - [8/11/2016 2:10:23 PM] - [XivDbAccess : CreateTable] - Created table [Emote]
+INFO - [8/11/2016 2:10:32 PM] - [XivDbAccess : CreateTable] - Created table [Enemy]
+INFO - [8/11/2016 2:10:32 PM] - [XivDbAccess : CreateTable] - Created table [FATE]
+INFO - [8/11/2016 2:10:32 PM] - [XivDbAccess : CreateTable] - Created table [Gathering]
+INFO - [8/11/2016 2:10:32 PM] - [XivDbAccess : CreateTable] - Created table [Instance]
+INFO - [8/11/2016 2:10:32 PM] - [XivDbAccess : CreateTable] - Created table [Item]
+INFO - [8/11/2016 2:10:32 PM] - [XivDbAccess : CreateTable] - Created table [Leve]
+INFO - [8/11/2016 2:10:32 PM] - [XivDbAccess : CreateTable] - Created table [Minion]
+INFO - [8/11/2016 2:10:32 PM] - [XivDbAccess : CreateTable] - Created table [Mount]
+INFO - [8/11/2016 2:10:32 PM] - [XivDbAccess : CreateTable] - Created table [NPC]
+INFO - [8/11/2016 2:10:32 PM] - [XivDbAccess : CreateTable] - Created table [Place]
+INFO - [8/11/2016 2:10:32 PM] - [XivDbAccess : CreateTable] - Created table [Quest]
+INFO - [8/11/2016 2:10:32 PM] - [XivDbAccess : CreateTable] - Created table [Recipe]
+INFO - [8/11/2016 2:10:32 PM] - [XivDbAccess : CreateTable] - Created table [Status]
+INFO - [8/11/2016 2:10:32 PM] - [XivDbAccess : CreateTable] - Created table [Title]
+INFO - [8/11/2016 2:10:32 PM] - [XivDbAccess : CreateTable] - Created table [Weather]
+WARN - [8/11/2016 2:11:00 PM] - [Class1 : .ctor] - Debug
+WARN - [8/11/2016 2:12:32 PM] - [Class1 : .ctor] - Debug
+WARN - [8/11/2016 2:13:59 PM] - [Class1 : .ctor] - Debug
+WARN - [8/11/2016 2:14:54 PM] - [Class1 : .ctor] - Debug
+WARN - [8/11/2016 4:10:52 PM] - [Class1 : .ctor] - Debug
