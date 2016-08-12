@@ -22,6 +22,7 @@
                 public const string SelectTemplate = @"SELECT * FROM {TABLE} WHERE 1 = 1";
                 public const string CreateTableTemplate = @"CREATE TABLE {NAME} ( {COLUMNS} );";
                 public const string InsertTemplate = @"INSERT INTO {NAME} VALUES ( {VALUES} )";
+                public const string UpdateTemplate = @"UPDATE {NAME} SET {VALUES} WHERE 1 = 1";
             }
         }
         public struct App

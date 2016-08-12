@@ -50,6 +50,8 @@ namespace XIVDB.DatabaseLayer.Access
         {
             //Run necessary Database checks
             if (System.IO.File.Exists(Data.Database.FilePath)) return Instance.Value;
+            //Create directory first.
+            System.IO.Directory.CreateDirectory(Data.Database.DirectoryName);
             SQLiteConnection.CreateFile(Data.Database.FilePath);
             Status = DbStatus.TablesNotCreated;
             //Return instance
@@ -116,7 +118,7 @@ namespace XIVDB.DatabaseLayer.Access
         /// <typeparam name="T">Type of object where T = IXivdbObject</typeparam>
         /// <param name="model">IXivdbObject with properties set to insert values</param>
         /// <returns>true or false</returns>
-        public bool Insert<T>(IXivdbObject model) where T : IXivdbObject
+        internal bool Insert<T>(IXivdbObject model) where T : IXivdbObject
         {
             //Use the helper to create the Insert string
             var insertString = DatabaseHelper.CreateInsert(model);
@@ -139,6 +141,40 @@ namespace XIVDB.DatabaseLayer.Access
             finally
             {
                 _log.Info($"Inserted new [{model.GetType().Name}] with primary key [Id - {model.Id}]");
+                if (_conn.State == ConnectionState.Open) _conn.Close();
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Updates record in database.
+        /// </summary>
+        /// <typeparam name="T">Type of object where T = IXivdbObject</typeparam>
+        /// <param name="model">IXivdbObject with properties used to Update</param>
+        /// <returns>true or false</returns>
+        internal bool Update<T>(IXivdbObject model) where T : IXivdbObject
+        {
+            //Use Helper to create Update string
+            var updateString = DatabaseHelper.CreateUpdate(model);
+            try
+            {
+                using (var cmd = _conn.CreateCommand())
+                {
+                    cmd.CommandText = updateString;
+                    cmd.CommandType = CommandType.Text;
+
+                    _conn.Open();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+            catch (Exception exc)
+            {
+                _log.Error($"Error occurred while updating record on model item [{model.GetType().Name}]");
+                ExceptionHandler.HandleException(exc);
+            }
+            finally
+            {
+                _log.Info($"Updated record of type [{model.GetType().Name}] with primary key [Id - {model.Id}]");
                 if (_conn.State == ConnectionState.Open) _conn.Close();
             }
             return false;

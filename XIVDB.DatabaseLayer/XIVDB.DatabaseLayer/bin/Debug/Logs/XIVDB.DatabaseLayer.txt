@@ -17,3 +17,115 @@ INFO - [8/11/2016 11:26:45 PM] - [XivDbAccess : CreateTable] - Created table [Re
 INFO - [8/11/2016 11:26:45 PM] - [XivDbAccess : CreateTable] - Created table [Status]
 INFO - [8/11/2016 11:26:45 PM] - [XivDbAccess : CreateTable] - Created table [Title]
 INFO - [8/11/2016 11:26:45 PM] - [XivDbAccess : CreateTable] - Created table [Weather]
+WARN - [8/12/2016 2:49:27 PM] - [Class1 : .ctor] - Debug
+WARN - [8/12/2016 2:50:38 PM] - [Class1 : .ctor] - Debug
+WARN - [8/12/2016 2:51:51 PM] - [Class1 : .ctor] - Debug
+INFO - [8/12/2016 2:52:11 PM] - [XivDbAccess : CreateTable] - Created table [Achievement]
+INFO - [8/12/2016 2:52:11 PM] - [XivDbAccess : CreateTable] - Created table [Action]
+INFO - [8/12/2016 2:52:11 PM] - [XivDbAccess : CreateTable] - Created table [Emote]
+INFO - [8/12/2016 2:52:11 PM] - [XivDbAccess : CreateTable] - Created table [Enemy]
+INFO - [8/12/2016 2:52:11 PM] - [XivDbAccess : CreateTable] - Created table [Fate]
+INFO - [8/12/2016 2:52:11 PM] - [XivDbAccess : CreateTable] - Created table [Gathering]
+INFO - [8/12/2016 2:52:11 PM] - [XivDbAccess : CreateTable] - Created table [Instance]
+INFO - [8/12/2016 2:52:11 PM] - [XivDbAccess : CreateTable] - Created table [Item]
+INFO - [8/12/2016 2:52:11 PM] - [XivDbAccess : CreateTable] - Created table [Leve]
+INFO - [8/12/2016 2:52:11 PM] - [XivDbAccess : CreateTable] - Created table [Minion]
+INFO - [8/12/2016 2:52:11 PM] - [XivDbAccess : CreateTable] - Created table [Mount]
+INFO - [8/12/2016 2:52:11 PM] - [XivDbAccess : CreateTable] - Created table [Npc]
+INFO - [8/12/2016 2:52:11 PM] - [XivDbAccess : CreateTable] - Created table [Place]
+INFO - [8/12/2016 2:52:11 PM] - [XivDbAccess : CreateTable] - Created table [Quest]
+INFO - [8/12/2016 2:52:11 PM] - [XivDbAccess : CreateTable] - Created table [Recipe]
+INFO - [8/12/2016 2:52:11 PM] - [XivDbAccess : CreateTable] - Created table [Status]
+INFO - [8/12/2016 2:52:11 PM] - [XivDbAccess : CreateTable] - Created table [Title]
+INFO - [8/12/2016 2:52:11 PM] - [XivDbAccess : CreateTable] - Created table [Weather]
+INFO - [8/12/2016 2:52:19 PM] - [XivDbAccess : Insert] - Inserted new [Item] with primary key [Id - 44]
+ERROR - [8/12/2016 2:54:59 PM] - [XivDbAccess : Update] - Error occurred while updating record on model item [Item]
+FATAL - [8/12/2016 2:55:17 PM] - [ExceptionHandler : HandleException] - SQL logic error or missing database
+near ",": syntax error
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.Update[T](IXivdbObject model) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 160
+WARN - [8/12/2016 3:10:19 PM] - [Class1 : .ctor] - Debug
+FATAL - [8/12/2016 3:10:21 PM] - [MainService : ValidateDbStatus] - Fatal Error occured. Database File not found.
+ERROR - [8/12/2016 3:10:21 PM] - [XivDbAccess : Get] - Error occurred when querying the database on model item [Item]
+FATAL - [8/12/2016 3:10:21 PM] - [ExceptionHandler : HandleException] - Object of type 'System.Int64' cannot be converted to type 'System.Nullable`1[System.Int32]'.
+   at System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   at System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   at System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   at System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   at System.Reflection.PropertyInfo.SetValue(Object obj, Object value)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.Get[T](IXivdbObject model) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 94
+ERROR - [8/12/2016 3:10:23 PM] - [XivDbAccess : Insert] - Error occurred while inserting record on model item [Item]
+FATAL - [8/12/2016 3:10:23 PM] - [ExceptionHandler : HandleException] - constraint failed
+UNIQUE constraint failed: Item.Id
+   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.Insert[T](IXivdbObject model) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 133
+INFO - [8/12/2016 3:10:23 PM] - [XivDbAccess : Insert] - Inserted new [Item] with primary key [Id - 44]
+INFO - [8/12/2016 3:11:38 PM] - [XivDbAccess : Update] - Updated record of type [Item] with primary key [Id - 5]
+WARN - [8/12/2016 3:13:41 PM] - [Class1 : .ctor] - Debug
+FATAL - [8/12/2016 3:13:46 PM] - [MainService : ValidateDbStatus] - Fatal Error occured. Database File not found.
+ERROR - [8/12/2016 3:13:46 PM] - [XivDbAccess : Get] - Error occurred when querying the database on model item [Item]
+FATAL - [8/12/2016 3:13:46 PM] - [ExceptionHandler : HandleException] - Object of type 'System.Int64' cannot be converted to type 'System.Nullable`1[System.Int32]'.
+   at System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   at System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   at System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   at System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   at System.Reflection.PropertyInfo.SetValue(Object obj, Object value)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.Get[T](IXivdbObject model) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 94
+ERROR - [8/12/2016 3:13:46 PM] - [XivDbAccess : Insert] - Error occurred while inserting record on model item [Item]
+FATAL - [8/12/2016 3:13:46 PM] - [ExceptionHandler : HandleException] - constraint failed
+UNIQUE constraint failed: Item.Id
+   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.Insert[T](IXivdbObject model) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 133
+INFO - [8/12/2016 3:13:46 PM] - [XivDbAccess : Insert] - Inserted new [Item] with primary key [Id - 44]
+INFO - [8/12/2016 3:14:08 PM] - [XivDbAccess : Update] - Updated record of type [Item] with primary key [Id - 5]
+WARN - [8/12/2016 3:14:43 PM] - [Class1 : .ctor] - Debug
+FATAL - [8/12/2016 3:14:46 PM] - [MainService : ValidateDbStatus] - Fatal Error occured. Database File not found.
+ERROR - [8/12/2016 3:14:47 PM] - [XivDbAccess : Get] - Error occurred when querying the database on model item [Item]
+FATAL - [8/12/2016 3:14:47 PM] - [ExceptionHandler : HandleException] - Object of type 'System.Int64' cannot be converted to type 'System.Nullable`1[System.Int32]'.
+   at System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   at System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   at System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   at System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   at System.Reflection.PropertyInfo.SetValue(Object obj, Object value)
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.Get[T](IXivdbObject model) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 94
+ERROR - [8/12/2016 3:14:47 PM] - [XivDbAccess : Insert] - Error occurred while inserting record on model item [Item]
+FATAL - [8/12/2016 3:14:47 PM] - [ExceptionHandler : HandleException] - constraint failed
+UNIQUE constraint failed: Item.Id
+   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at XIVDB.DatabaseLayer.Access.XivDbAccess.Insert[T](IXivdbObject model) in C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\Access\XivDbAccess.cs:line 133
+INFO - [8/12/2016 3:14:47 PM] - [XivDbAccess : Insert] - Inserted new [Item] with primary key [Id - 44]
+INFO - [8/12/2016 3:14:55 PM] - [XivDbAccess : Update] - Updated record of type [Item] with primary key [Id - 44]

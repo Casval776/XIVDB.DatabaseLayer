@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{56749A63-C854-4BBA-B077-FBF7B3B29FBF}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>XIVDB.DatabaseLayer</RootNamespace>
     <AssemblyName>XIVDB.DatabaseLayer</AssemblyName>
@@ -75,7 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Access\XivDbAccess.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Client\DbClient.cs" />
     <Compile Include="Config\DBConfig.cs" />
     <Compile Include="Global\ExceptionHandler.cs" />

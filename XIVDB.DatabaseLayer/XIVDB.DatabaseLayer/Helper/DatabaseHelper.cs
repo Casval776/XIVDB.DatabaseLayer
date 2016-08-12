@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -48,6 +49,11 @@ namespace XIVDB.DatabaseLayer.Helper
             return template.Replace("{TABLE}", model.GetType().Name).ToString();
         }
 
+        /// <summary>
+        /// Strips model object's property values into Insert statement
+        /// </summary>
+        /// <param name="model">IXivdbObject with properties set to insert values</param>
+        /// <returns>Insert statement</returns>
         public static string CreateInsert(IXivdbObject model)
         {
             var template = new StringBuilder(Data.Database.SQL.InsertTemplate);
@@ -59,6 +65,28 @@ namespace XIVDB.DatabaseLayer.Helper
                 .ToList();
             return template.Replace("{NAME}", model.GetType().Name)
                 .Replace("{VALUES}", string.Join(",", valList))
+                .ToString();
+        }
+
+        public static string CreateUpdate(IXivdbObject model)
+        {
+            var template = new StringBuilder(Data.Database.SQL.UpdateTemplate);
+            var valList = new List<string>();
+            //Strip values
+            foreach (var property in model.GetType().GetProperties().Where(prop => prop.Name != "Id"))
+            {
+                var objVal = property.GetValue(model);
+                var insertVal = objVal == null ? "null" : Convert.ToString(objVal);
+                if (property.PropertyType == typeof(string) ||
+                    property.PropertyType == typeof(DateTime))
+                    valList.Add($"{property.Name} = '{insertVal}'");
+                else
+                    valList.Add($"{property.Name} = {insertVal}");
+            }
+            //Replace placeholders and return
+            return template.Replace("{NAME}", model.GetType().Name)
+                .Replace("{VALUES}", string.Join(",", valList))
+                .AppendLine($" AND Id = {model.Id}")
                 .ToString();
         }
     }

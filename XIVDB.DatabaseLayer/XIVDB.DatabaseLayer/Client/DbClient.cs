@@ -68,6 +68,28 @@ namespace XIVDB.DatabaseLayer.Client
         {
             return _service.Insert<T>(model);
         }
+
+        /// <summary>
+        /// Updates record in database. Primary Key cannot be null.
+        /// </summary>
+        /// <typeparam name="T">Type of object where T = IXivdbObject</typeparam>
+        /// <param name="model">IXivdbObject with properties used to update</param>
+        /// <returns>true or false</returns>
+        public bool Update<T>(IXivdbObject model) where T : IXivdbObject
+        {
+            return _service.Update<T>(model);
+        }
+
+        /// <summary>
+        /// Inserts record in database if it doesn't already exist. Primary Key cannot be null.
+        /// </summary>
+        /// <typeparam name="T">Type of object where T = IXivdbObject</typeparam>
+        /// <param name="model">IXivdbObject with properties used to insert</param>
+        /// <returns>true or false</returns>
+        public bool InsertIfNotExists<T>(IXivdbObject model) where T : IXivdbObject
+        {
+            return _service.InsertIfNotExists<T>(model);
+        }
         #endregion
 
         #region Private Methods

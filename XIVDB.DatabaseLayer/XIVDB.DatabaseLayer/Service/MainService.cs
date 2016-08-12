@@ -57,6 +57,36 @@ namespace XIVDB.DatabaseLayer.Service
             _log.Warning($"Insert attempted with null Primary Key on Model type [{model.GetType().Name}]");
             return false;
         }
+
+        /// <summary>
+        /// Updates record in database. Primary Key cannot be null.
+        /// </summary>
+        /// <typeparam name="T">Type of object where T = IXivdbObject</typeparam>
+        /// <param name="model">IXivdbObject with properties used to update</param>
+        /// <returns>true or false</returns>
+        public bool Update<T>(IXivdbObject model) where T : IXivdbObject
+        {
+            //Inverted conditional
+            if (model.Id != null) return _access.Update<T>(model);
+            //If primary key is null, do not update.
+            //We will not be performing updates for items that are not returned by the API
+            _log.Warning($"Update attempted with null Primary Key on Model type [{model.GetType().Name}]");
+            return false;
+        }
+
+        /// <summary>
+        /// Inserts record in database if it doesn't already exist. Primary Key cannot be null.
+        /// </summary>
+        /// <typeparam name="T">Type of object where T = IXivdbObject</typeparam>
+        /// <param name="model">IXivdbObject with properties used to insert</param>
+        /// <returns>true or false</returns>
+        public bool InsertIfNotExists<T>(IXivdbObject model) where T : IXivdbObject
+        {
+            //If primary key is null, don't bother checking anything else
+            if (model.Id != null) return !_access.Get<T>(model).Any() && _access.Insert<T>(model);
+            _log.Warning($"InsertIfNotExists attempted with null Primary Key on Model type [{model.GetType().Name}]");
+            return false;
+        }
         #endregion
 
         #region Private Methods
@@ -86,23 +116,6 @@ namespace XIVDB.DatabaseLayer.Service
         #endregion
 
         #region Internal Methods
-        /// <summary>
-        /// Creates Database file
-        /// </summary>
-        internal void CreateDbFile()
-        {
-            //Log this process
-            _log.Info("Database file not found. Creating file...");
-            //Create directory first.
-            System.IO.Directory.CreateDirectory(Data.Database.DirectoryName);
-            //Create sqlite file
-            System.IO.File.Create(Data.Database.FilePath);
-            _log.Info("Database file created.");
-
-            //Create tables
-            CreateDbTables();
-        }
-
         /// <summary>
         /// Scans the Assembly for the Model namespace to create DB tables
         /// </summary>

@@ -4,7 +4,6 @@ C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\bi
 C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\bin\Debug\System.Data.SQLite.dll
 C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\bin\Debug\System.Data.SQLite.EF6.dll
 C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\bin\Debug\System.Data.SQLite.Linq.dll
-C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\bin\Debug\XIVDB.dll
 C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\bin\Debug\log4net.dll
 C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\bin\Debug\Newtonsoft.Json.dll
 C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\bin\Debug\EntityFramework.xml
@@ -15,9 +14,6 @@ C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\bi
 C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\bin\Debug\Newtonsoft.Json.xml
 C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\obj\Debug\XIVDB.DatabaseLayer.csprojResolveAssemblyReference.cache
 C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\obj\Debug\XIVDB.DatabaseLayer.pdb
-C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\bin\Debug\XIVDB.DatabaseLayer.exe.config
-C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\bin\Debug\XIVDB.DatabaseLayer.exe
-C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\obj\Debug\XIVDB.DatabaseLayer.exe
 C:\Source\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\bin\Debug\XIVDB.DatabaseLayer.exe.config
 C:\Source\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\bin\Debug\XIVDB.DatabaseLayer.exe
 C:\Source\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\bin\Debug\XIVDB.DatabaseLayer.pdb
@@ -38,3 +34,6 @@ C:\Source\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\bin\Debug\
 C:\Source\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\obj\Debug\XIVDB.DatabaseLayer.csprojResolveAssemblyReference.cache
 C:\Source\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\obj\Debug\XIVDB.DatabaseLayer.exe
 C:\Source\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\obj\Debug\XIVDB.DatabaseLayer.pdb
+C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\bin\Debug\XIVDB.DatabaseLayer.dll.config
+C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\bin\Debug\XIVDB.DatabaseLayer.dll
+C:\Users\grans\Source\Repos\XIVDB.WPF\XIVDB.DatabaseLayer\XIVDB.DatabaseLayer\obj\Debug\XIVDB.DatabaseLayer.dll
