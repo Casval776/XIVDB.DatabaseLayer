@@ -40,7 +40,23 @@ namespace XIVDB.DatabaseLayer.Service
         public IEnumerable<T> Get<T>(IXivdbObject model) where T : IXivdbObject
         {
             return _access.Get<T>(model);
-        } 
+        }
+
+        /// <summary>
+        /// Inserts new record to database. Primary Key cannot be null.
+        /// </summary>
+        /// <typeparam name="T">Type of object where T = IXivdbObject</typeparam>
+        /// <param name="model">IXivdbObject with properties used as insert parameters</param>
+        /// <returns>true or false</returns>
+        public bool Insert<T>(IXivdbObject model) where T : IXivdbObject
+        {
+            //Inverted conditional
+            if (model.Id != null) return _access.Insert<T>(model);
+            //If primary key is null, do not insert.
+            //All objects returned from the API have a primary key
+            _log.Warning($"Insert attempted with null Primary Key on Model type [{model.GetType().Name}]");
+            return false;
+        }
         #endregion
 
         #region Private Methods
@@ -101,7 +117,7 @@ namespace XIVDB.DatabaseLayer.Service
                 try
                 {
                     //If returned result is failure, log it and continue
-                    if (!_access.CreateTable(model)) _log.Warning("Error occured during table creation for object [" + model.Name + "].");
+                    if (!_access.CreateTable(model)) _log.Warning($"Error occured during table creation for object [{model.Name}].");
                 }
                 catch (Exception exc)
                 {

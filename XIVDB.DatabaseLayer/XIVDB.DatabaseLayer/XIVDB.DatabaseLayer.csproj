@@ -68,8 +68,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="XIVDB">
-      <HintPath>..\..\..\..\..\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\XIVDB.dll</HintPath>
+    <Reference Include="XIVDB, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\XIVDB.DataLayer\XIVDB\bin\Debug\XIVDB.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

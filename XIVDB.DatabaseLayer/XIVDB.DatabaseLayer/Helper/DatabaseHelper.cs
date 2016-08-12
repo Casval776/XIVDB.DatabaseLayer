@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using XIVDB.DatabaseLayer.Static;
 using XIVDB.Interfaces;
@@ -44,6 +46,20 @@ namespace XIVDB.DatabaseLayer.Helper
             }
             //Set table name and return
             return template.Replace("{TABLE}", model.GetType().Name).ToString();
+        }
+
+        public static string CreateInsert(IXivdbObject model)
+        {
+            var template = new StringBuilder(Data.Database.SQL.InsertTemplate);
+            var valList = model.GetType().GetProperties()
+                .Select(property => property.GetValue(model))
+                .Select(objVal => objVal == null 
+                    ? "null" 
+                    : Convert.ToString(objVal))
+                .ToList();
+            return template.Replace("{NAME}", model.GetType().Name)
+                .Replace("{VALUES}", string.Join(",", valList))
+                .ToString();
         }
     }
 }

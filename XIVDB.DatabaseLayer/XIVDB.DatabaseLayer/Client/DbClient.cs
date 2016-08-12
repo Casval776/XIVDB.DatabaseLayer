@@ -57,6 +57,17 @@ namespace XIVDB.DatabaseLayer.Client
         {
             return _service.Get<T>(model).FirstOrDefault();
         }
+
+        /// <summary>
+        /// Inserts new record to database. Primary Key cannot be null.
+        /// </summary>
+        /// <typeparam name="T">Type of object where T = IXivdbObject</typeparam>
+        /// <param name="model">IXivdbObject with properties used as insert parameters</param>
+        /// <returns>true or false</returns>
+        public bool Insert<T>(IXivdbObject model) where T : IXivdbObject
+        {
+            return _service.Insert<T>(model);
+        }
         #endregion
 
         #region Private Methods

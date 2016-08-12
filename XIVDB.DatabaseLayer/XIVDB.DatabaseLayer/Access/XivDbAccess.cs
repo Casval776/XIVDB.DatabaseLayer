@@ -108,7 +108,41 @@ namespace XIVDB.DatabaseLayer.Access
                 if (_conn.State == ConnectionState.Open) _conn.Close();
             }
             return rtnList;
-        } 
+        }
+
+        /// <summary>
+        /// Inserts new record into the database
+        /// </summary>
+        /// <typeparam name="T">Type of object where T = IXivdbObject</typeparam>
+        /// <param name="model">IXivdbObject with properties set to insert values</param>
+        /// <returns>true or false</returns>
+        public bool Insert<T>(IXivdbObject model) where T : IXivdbObject
+        {
+            //Use the helper to create the Insert string
+            var insertString = DatabaseHelper.CreateInsert(model);
+            try
+            {
+                using (var cmd = _conn.CreateCommand())
+                {
+                    cmd.CommandText = insertString;
+                    cmd.CommandType = CommandType.Text;
+
+                    _conn.Open();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+            catch (Exception exc)
+            {
+                _log.Error($"Error occurred while inserting record on model item [{model.GetType().Name}]");
+                ExceptionHandler.HandleException(exc);
+            }
+            finally
+            {
+                _log.Info($"Inserted new [{model.GetType().Name}] with primary key [Id - {model.Id}]");
+                if (_conn.State == ConnectionState.Open) _conn.Close();
+            }
+            return false;
+        }
         #endregion
 
         #region Private Methods
@@ -130,14 +164,10 @@ namespace XIVDB.DatabaseLayer.Access
                 var columnList = Activator.CreateInstance(t).GetType().GetProperties().Select(property =>
                     property.Name + " " +
                     DatabaseHelper.DataType[property.PropertyType] +
-                    (property.Name == "Id" ? " PRIMARY KEY" : string.Empty) +
-                    ",").ToList();
-                //Replace the comma in the last entry
-                columnList[columnList.Count - 1] = columnList[columnList.Count - 1].Replace(",", string.Empty);
+                    (property.Name == "Id" ? " PRIMARY KEY" : string.Empty)).ToList();
                 //Replace template placeholders with actual data
                 template = template.Replace("{NAME}", t.Name);
-                template = template.Replace("{COLUMNS}",
-                    columnList.Aggregate(string.Empty, (current, field) => current + field));
+                template = template.Replace("{COLUMNS}", string.Join(",", columnList));
                 //Create table
                 using (var cmd = _conn.CreateCommand())
                 {
